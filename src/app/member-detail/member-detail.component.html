@@ -1,0 +1,26 @@
+<p>
+  member-detail works!
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td width="5%">
+        <img [src]="member.avatar" width="120" height="120">
+      </td>
+      <td>{{ member.name }}</td>
+    </tr>
+  </tbody>
+</table>
+<form>
+  <input type="text">
+  <input type="file">
+</form>
+
+<button (click)="onBack()">Back</button>
+<button>Submit</button>

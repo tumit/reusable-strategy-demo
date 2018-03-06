@@ -1,0 +1,26 @@
+<p>
+  members works!
+</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>
+        <input type="checkbox" [checked]="allChecked()" (click)="toggleSelectAll($event.target.checked)">
+      </th>
+      <th>Avatar</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let member of members">
+      <td width="2%">
+        <input type="checkbox" [(ngModel)]="member.selected">
+      </td>
+      <td width="5%">
+        <img [src]="member.avatar" width="120" height="120">
+      </td>
+      <td>{{ member.name }}</td>
+    </tr>
+  </tbody>
+</table>
+<button (click)="onNext()">Next</button>
